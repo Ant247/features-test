@@ -33,7 +33,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: maven
     - name: Create Maven project
       run: mvn -B archetype:generate -DgroupId=${{ inputs.groupId }} -DartifactId=${{ inputs.artifactId }} -DarchetypeArtifactId=${{ inputs.template }} -DinteractiveMode=false
     - name: Add new project to repo
