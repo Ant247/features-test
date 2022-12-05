@@ -16,7 +16,7 @@ on:
         default: 'com.dakoyam'
       artifactId:
         type: string
-        default: ''
+        default: 'project'
       template:
         type: string
         default: 'maven-archetype-quickstart
