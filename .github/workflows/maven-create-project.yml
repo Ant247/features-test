@@ -16,7 +16,7 @@ on:
         default: 'com.com.dakoyam'
       artifactId:
         type: string
-      template:
+      templateName:
         type: string
         default: 'maven-archetype-quickstart
 
@@ -34,7 +34,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Create Maven project
-      run: mvn -B archetype:generate -DgroupId=${{ inputs.groupId }} -DartifactId=${{ inputs.artifactId }} -DarchetypeArtifactId=${{ inputs.template }} -DinteractiveMode=false
+      run: mvn -B archetype:generate -DgroupId=${{ inputs.groupId }} -DartifactId=${{ inputs.artifactId }} -DarchetypeArtifactId=${{ inputs.templateName }} -DinteractiveMode=false
     - name: Add new project to repo
       run: git config user.name github-actions
            git config user.email github-actions@github.com
