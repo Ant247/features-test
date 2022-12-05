@@ -19,7 +19,7 @@ on:
         default: 'project'
       template:
         type: string
-        default: 'maven-archetype-quickstart
+        default: 'maven-archetype-quickstart'
 
 jobs:
   build:
